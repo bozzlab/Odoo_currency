@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_invoice_supplier_form" model="ir.ui.view">
+            <field name="name">account.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='currency_id']" position="after">
+                    <field name="currency_name" invisible="1" />
+                    <field name="currency_related" invisible="1" />
+                   <!-- <field name="currency_rate" attrs="{'readonly': ['|', ('currency_name','=', 'THB'), ('state', '!=', 'draft')]}"/> -->
+                   <field name="currency_rate" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='price_unit']" position="after">
+                    <field name="po_price_unit" invisible="1" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
