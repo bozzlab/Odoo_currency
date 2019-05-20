@@ -7,11 +7,10 @@
         'base',
         'account',
         'purchase',
-        'purchase_requisition_for_sales',
         'core_update',
     ],
-    'author' : 'Bozz',
-    'category': 'Bozz',
+    'author' : 'Bozz Srinikorn',
+    'category': 'Bozz Srinikorn',
     'description': """
         Module Purchase to invoice
             - set currency rate in vendor bill
